@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>GLCM Application</title>
+	<link href="/static/css/app.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script type="text/javascript" src="/static/js/app.js"></script>
+</head>
+<body>
+
+	<div class="main-container">
+		
+
+		<div class="select-angle-distance">
+			<select class="select" id="select-distance">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+			</select>
+			<select class="select" id="select-angle">
+				<option>0&deg;</option>
+				<option>45&deg;</option>
+				<option>90&deg;</option>
+				<option>135&deg;</option>
+			</select>
+		</div>
+		<div class="input-output">
+			<div class="output-grid-container"></div>
+			<div class="input-grid-container">
+				{% for i in range(1, 65) %}
+					<button class="input-buttons" id="input-button-{{i}}">{{ i }}</button>
+				{% endfor %}
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+</html>
